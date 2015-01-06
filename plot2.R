@@ -1,5 +1,8 @@
 # plot 2
 
+# ensure day and month names are written in English
+Sys.setlocale(locale='C')
+
 cols <- read.csv('../household_power_consumption.txt',sep=';',nrows=1);
 d <- read.csv('../household_power_consumption.txt',sep=';',nrows=24*60*2,skip=66636,header=T); 
 names(d) <- names(cols); 
